@@ -27,23 +27,23 @@ class Post extends Model
         return $this->belongsToMany(Category::class);
     }
 
-    // public function shortBody(): string
-    // {
-    //     return Str::words(strip_tags($this->body), 30);
-    // }
+    public function shortBody(): string
+    {
+        return Str::words(strip_tags($this->body), 30);
+    }
 
-    // public function getFormattedDate()
-    // {
-    //     return $this->published_at->format('F jS Y');
-    // }
+    public function getFormattedDate()
+    {
+        return $this->published_at->format('F jS Y');
+    }
 
-    // public function getThumbnail()
-    // {
-    //     if (str_starts_with($this->thumbnail, 'http')) {
-    //         return $this->thumbnail;
-    //     }
-    //     return '/storage/' . $this->thumbnail;
-    // }
+    public function getThumbnail()
+    {
+        if (str_starts_with($this->thumbnail, 'http')) {
+            return $this->thumbnail;
+        }
+        return '/storage/' . $this->thumbnail;
+    }
 
    
 }
