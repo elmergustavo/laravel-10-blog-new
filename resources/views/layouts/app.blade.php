@@ -6,22 +6,14 @@
     <title>Tailwind Blog Template</title>
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
+     <!-- Font Awesome -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 
-    <!-- Tailwind -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-
-        .font-family-karla {
-            font-family: karla;
-        }
-
-    </style>
-
-    <!-- AlpineJS -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+   @vite(['resources/css/app.css', 'resources/js/app.js'])
+   @livewireStyles
+   @livewireScripts
+   @stack('scripts')
+  
 </head>
 <body class="bg-white font-family-karla">
 
@@ -58,7 +50,7 @@
     <header class="container w-full mx-auto">
         <div class="flex flex-col items-center py-12">
             <a class="text-5xl font-bold text-gray-800 uppercase hover:text-gray-700" href="#">
-                Minimal Blog
+                Tavcode
             </a>
             <p class="text-lg text-gray-600">
                 Lorem Ipsum Dolor Sit Amet
@@ -101,7 +93,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-col w-full p-6 my-4 bg-white shadow">
+            {{-- <div class="flex flex-col w-full p-6 my-4 bg-white shadow">
                 <p class="pb-5 text-xl font-semibold">Instagram</p>
                 <div class="grid grid-cols-3 gap-3">
                     <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
@@ -117,14 +109,14 @@
                 <a href="#" class="flex items-center justify-center w-full px-2 py-3 mt-6 text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
                     <i class="mr-2 fab fa-instagram"></i> Follow @dgrzyb
                 </a>
-            </div>
+            </div> --}}
 
         </aside>
 
     </div>
 
     <footer class="w-full pb-12 bg-white border-t">
-        <div class="relative flex items-center invisible w-full md:visible md:pb-12" x-data="getCarouselData()">
+        {{-- <div class="relative flex items-center invisible w-full md:visible md:pb-12" x-data="getCarouselData()">
             <button class="absolute w-16 h-16 ml-12 text-2xl font-bold text-white bg-blue-800 rounded-full hover:bg-blue-700 hover:shadow" x-on:click="decrement()">
                 &#8592;
             </button>
@@ -134,19 +126,19 @@
             <button class="absolute right-0 w-16 h-16 mr-12 text-2xl font-bold text-white bg-blue-800 rounded-full hover:bg-blue-700 hover:shadow" x-on:click="increment()">
                 &#8594;
             </button>
-        </div>
+        </div> --}}
         <div class="container flex flex-col items-center w-full mx-auto">
-            <div class="flex flex-col py-6 text-center md:flex-row md:text-left md:justify-between">
+            {{-- <div class="flex flex-col py-6 text-center md:flex-row md:text-left md:justify-between">
                 <a href="#" class="px-3 uppercase">About Us</a>
                 <a href="#" class="px-3 uppercase">Privacy Policy</a>
                 <a href="#" class="px-3 uppercase">Terms & Conditions</a>
                 <a href="#" class="px-3 uppercase">Contact Us</a>
-            </div>
-            <div class="pb-6 uppercase">&copy; myblog.com</div>
+            </div> --}}
+            <div class="py-6 uppercase">&copy; myblog.com</div>
         </div>
     </footer>
 
-    <script>
+    {{-- <script>
         function getCarouselData() {
             return {
                 currentIndex: 0
@@ -170,7 +162,7 @@
             , }
         }
 
-    </script>
+    </script> --}}
 
 </body>
 </html>
