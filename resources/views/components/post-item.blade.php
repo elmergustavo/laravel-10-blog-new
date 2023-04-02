@@ -2,7 +2,7 @@
 
     <!-- Article Image -->
     <a href="#" class="hover:opacity-75">
-        <img src="{{$post->getThumbnail()}}">
+        <img  class="w-full" src="{{$post->getThumbnail()}}">
     </a>
     <div class="flex flex-col justify-start p-6 bg-white">
 
@@ -19,7 +19,6 @@
         <p href="#" class="pb-3 text-sm">
             By <a href="#" class="font-semibold hover:text-gray-800">{{$post->user->name}}</a>, Published on
             {{$post->getFormattedDate()}}
-
         </p>
         <a href="#" class="pb-6">
             {{$post->shortBody()}}

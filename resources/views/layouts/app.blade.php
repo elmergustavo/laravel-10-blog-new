@@ -83,7 +83,7 @@
        {{ $slot}}
 
         <!-- Sidebar Section -->
-        <aside class="flex flex-col items-center w-full px-3 md:w-1/3">
+        <aside class="flex flex-col items-center w-full md:w-1/3">
 
             <div class="flex flex-col w-full p-6 my-4 bg-white shadow">
                 <p class="pb-5 text-xl font-semibold">About Us</p>
