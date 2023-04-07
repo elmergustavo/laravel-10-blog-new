@@ -20,7 +20,7 @@ class PostController extends Controller
             ->where('active', '=', 1)
             ->whereDate('published_at', '<', Carbon::now())
             ->orderBy('published_at', 'desc')
-            ->paginate(2);
+            ->paginate(20);
         return view('home', compact('posts'));
     }
 
