@@ -142,6 +142,7 @@ return [
         'register' => [
             Widgets\AccountWidget::class,
             Widgets\FilamentInfoWidget::class,
+            \Awcodes\Overlook\Overlook::class,
         ],
     ],
 
@@ -329,6 +330,7 @@ return [
             SubstituteBindings::class,
             DispatchServingFilamentEvent::class,
             MirrorConfigToSubpackages::class,
+            \musa11971\FilamentTranslationManager\Http\Middleware\SetLanguage::class,
         ],
     ],
 

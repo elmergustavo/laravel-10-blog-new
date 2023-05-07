@@ -53,7 +53,7 @@
                 Tavcode
             </a>
             <p class="text-lg text-gray-600">
-                Lorem Ipsum Dolor Sit Amet
+                {!!  \App\Models\TextWidget::getContent('header') !!}
             </p>
         </div>
     </header>
