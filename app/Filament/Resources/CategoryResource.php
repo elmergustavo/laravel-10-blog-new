@@ -23,8 +23,6 @@ class CategoryResource extends Resource
 
     protected static ?string $navigationGroup = 'Content';
 
-
-
     public static function form(Form $form): Form
     {
         return $form
@@ -39,6 +37,7 @@ class CategoryResource extends Resource
 
                 Forms\Components\TextInput::make('slug')
                     ->required()
+                    ->disabled()
                     ->maxLength(2048),
             ]);
     }

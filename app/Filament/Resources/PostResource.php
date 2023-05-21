@@ -41,6 +41,7 @@ class PostResource extends Resource
                             }),
                         Forms\Components\TextInput::make('slug')
                             ->required()
+                            ->disabled()
                             ->maxLength(2048),
                         Forms\Components\RichEditor::make('body')
                             ->required(),

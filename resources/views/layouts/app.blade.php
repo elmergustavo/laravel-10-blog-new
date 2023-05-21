@@ -49,8 +49,8 @@
     <!-- Text Header -->
     <header class="container w-full mx-auto">
         <div class="flex flex-col items-center py-12">
-            <a class="text-5xl font-bold text-gray-800 uppercase hover:text-gray-700" href="#">
-                Tavcode
+            <a class="text-5xl font-bold text-gray-800 uppercase hover:text-gray-700" href="/">
+                {!!  \App\Models\TextWidget::getTitle('header') !!}
             </a>
             <p class="text-lg text-gray-600">
                 {!!  \App\Models\TextWidget::getContent('header') !!}
