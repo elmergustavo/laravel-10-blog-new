@@ -3,6 +3,19 @@
         <aside class="flex flex-col items-center w-full md:w-1/3">
 
             <div class="flex flex-col w-full p-6 my-4 bg-white shadow">
+                <h3 class="text-xl font-semibold mb-3">
+                    All categories
+                </h3>
+                @foreach($categories as $category)
+                <a 
+                   class="text-semibold block py-2 px-3 rounded {{ request('category')?->slug === $category->slug
+                    ? 'bg-blue-600 text-white' :  ''}}">
+                    {{$category->title}} ({{$category->total}})
+                </a>
+            @endforeach
+            </div>
+
+            <div class="flex flex-col w-full p-6 my-4 bg-white shadow">
                 <p class="pb-5 text-xl font-semibold">
                     {{\App\Models\TextWidget::getTitle('about-us-sidebar')}}
                 </p>
