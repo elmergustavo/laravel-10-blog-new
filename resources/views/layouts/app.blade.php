@@ -70,7 +70,10 @@
                 <a href="{{route('home')}}" class="px-4 py-2 mx-2 rounded hover:bg-gray-400">Home</a>
                 @foreach($categories as $category)
                     <a 
-                       class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2 cursor-pointer">{{$category->title}}</a>
+                    href="{{ route('by-category', $category) }}"
+                    class="text-semibold block py-2 px-3 rounded {{ request('category')?->slug === $category->slug
+                    ? 'bg-blue-600 text-white' :  ''}}"   
+                    >{{$category->title}}</a>
                 @endforeach
                 <a href="#" class="px-4 py-2 mx-2 rounded hover:bg-gray-400">Aboust Us</a>
             </div>
