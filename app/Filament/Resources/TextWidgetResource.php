@@ -21,7 +21,7 @@ class TextWidgetResource extends Resource
 
     protected static ?string $navigationGroup = 'Content';
 
-    
+
     public static function form(Form $form): Form
     {
         return $form
@@ -60,14 +60,14 @@ class TextWidgetResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -76,5 +76,5 @@ class TextWidgetResource extends Resource
             // 'view' => Pages\ViewTextWidget::route('/{record}'),
             'edit' => Pages\EditTextWidget::route('/{record}/edit'),
         ];
-    }    
+    }
 }
