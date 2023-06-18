@@ -13,7 +13,7 @@
    @livewireStyles
    @livewireScripts
    @stack('scripts')
-  
+
 </head>
 <body class="bg-white font-family-karla">
 
@@ -69,13 +69,13 @@
             <div class="container flex flex-col items-center justify-center w-full px-6 py-2 mx-auto mt-0 text-sm font-bold uppercase sm:flex-row">
                 <a href="{{route('home')}}" class="px-4 py-2 mx-2 rounded hover:bg-gray-400">Home</a>
                 @foreach($categories as $category)
-                    <a 
+                    <a
                     href="{{ route('by-category', $category) }}"
                     class="text-semibold block py-2 px-3 rounded {{ request('category')?->slug === $category->slug
-                    ? 'bg-blue-600 text-white' :  ''}}"   
+                    ? 'bg-blue-600 text-white' :  ''}}"
                     >{{$category->title}}</a>
                 @endforeach
-                <a href="#" class="px-4 py-2 mx-2 rounded hover:bg-gray-400">Aboust Us</a>
+                <a href="/about-us" class="px-4 py-2 mx-2 rounded hover:bg-gray-400">Aboust Us</a>
             </div>
         </div>
     </nav>
@@ -85,7 +85,7 @@
 
        {{ $slot}}
 
-        
+
 
     </div>
 

@@ -22,7 +22,7 @@
 
 
                 {!! \App\Models\TextWidget::getContent('about-us-sidebar') !!}
-                <a href="#" class="flex items-center justify-center w-full px-2 py-3 mt-4 text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
+                <a href="" class="flex items-center justify-center w-full px-2 py-3 mt-4 text-sm font-bold text-white uppercase bg-blue-800 rounded hover:bg-blue-700">
                     Get to know us
                 </a>
             </div>

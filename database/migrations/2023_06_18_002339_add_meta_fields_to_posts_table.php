@@ -8,27 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up(): void
     {
-        Schema::create('language_lines', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('group')->index();
-            $table->string('key');
-            $table->json('text');
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('meta_title', 255)->nullable();
+            $table->string('meta_description', 255)->nullable();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down(): void
     {
-        Schema::dropIfExists('language_lines');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('meta_title');
+            $table->dropColumn('meta_description');
+        });
     }
 };
